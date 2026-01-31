@@ -13,7 +13,7 @@ function Register() {
     e.preventDefault();
     try {
       await API.post("/auth/register", {name, email, password });
-      navigate("/dashboard");
+      navigate("/");
     } catch (err) {
       setError(err.response?.data?.msg || "Registration failed");
     }
